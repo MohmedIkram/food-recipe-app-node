@@ -3,12 +3,16 @@ import express from "express";
 import mongoose from "mongoose";
 import router from "./routes/recipe.js";
 import { userRouter } from "./routes/user.js";
+
+import dotenv from "dotenv";
+dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 console.log("test connection");
 // Opened Connection to DB, movieData - db name
-const url = "mongodb+srv://ikram:ikram98@cluster0.rlfdm.mongodb.net/FoodRecipe";
+const url = `mongodb+srv://ikram:${process.env.MongoPassword}@cluster0.rlfdm.mongodb.net/FoodRecipe`;
 
 mongoose.connect(url, { useNewUrlParser: true });
 const con = mongoose.connection;
