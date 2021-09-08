@@ -23,7 +23,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (request, respone) => {
-  respone.send("Welcome to node app!!!! Hi Guys");
+  respone.send("Welcome to Food-recipie app!!!! Hi Guys");
 });
 
 app.use("/users", userRouter);

@@ -5,6 +5,9 @@ import { auth as nice } from "../middleware/auth.js";
 import { Users } from "../models/users.js";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
+import dotenv from "dotenv";
+dotenv.config();
+
 const router = express.Router();
 
 // nodemailer
